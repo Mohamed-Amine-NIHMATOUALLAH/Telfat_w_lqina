@@ -413,6 +413,4 @@ If you find a bug or security issue, open an issue and label it appropriately (e
 
 ---
 
-**Note**: Replace `YOUR_USERNAME` with your actual GitHub username before pushing!
-
 
