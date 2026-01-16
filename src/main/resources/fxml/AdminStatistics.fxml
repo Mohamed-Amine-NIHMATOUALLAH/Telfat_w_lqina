@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.Double?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Polygon?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane style="-fx-background-color: #faf8f5;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.firstproject.telfat_w_lqina.controllers.AdminStatisticsController">
+    <!-- Sidebar Navigation -->
+    <left>
+        <ScrollPane fitToWidth="true" hbarPolicy="NEVER" style="-fx-background-color: transparent; -fx-background: transparent;" vbarPolicy="AS_NEEDED" xmlns="http://javafx.com/javafx/21">
+            <VBox prefWidth="260.0" style="-fx-background-color: linear-gradient(to bottom, #ffffff, #faf8f5); -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 12, 0, 3, 0);">
+
+                <!-- Logo Header avec motif géométrique -->
+                <StackPane prefHeight="90.0" style="-fx-background-color: white;">
+                    <!-- Motif décoratif subtil -->
+                    <HBox alignment="CENTER" opacity="0.08" spacing="-5">
+                        <Polygon fill="#C1272D" rotate="22.5">
+                            <points>
+                                <Double fx:value="0.0" /> <Double fx:value="-8.0" />
+                                <Double fx:value="5.7" /> <Double fx:value="-2.5" />
+                                <Double fx:value="5.7" /> <Double fx:value="5.7" />
+                                <Double fx:value="-5.7" /> <Double fx:value="5.7" />
+                                <Double fx:value="-5.7" /> <Double fx:value="-2.5" />
+                            </points>
+                        </Polygon>
+                        <Polygon fill="#006233" rotate="45">
+                            <points>
+                                <Double fx:value="0.0" /> <Double fx:value="-8.0" />
+                                <Double fx:value="5.7" /> <Double fx:value="-2.5" />
+                                <Double fx:value="5.7" /> <Double fx:value="5.7" />
+                                <Double fx:value="-5.7" /> <Double fx:value="5.7" />
+                                <Double fx:value="-5.7" /> <Double fx:value="-2.5" />
+                            </points>
+                        </Polygon>
+                    </HBox>
+
+                    <HBox alignment="CENTER_LEFT" spacing="12" style="-fx-padding: 20;">
+                        <Polygon fill="#006233" stroke="WHITE" strokeType="INSIDE" strokeWidth="1.0">
+                            <points>
+                                <Double fx:value="-20.0" /> <Double fx:value="16.0" />
+                                <Double fx:value="20.0" /> <Double fx:value="16.0" />
+                                <Double fx:value="0.0" /> <Double fx:value="-24.0" />
+                            </points>
+                            <points>
+                                <Double fx:value="0.0" /> <Double fx:value="-18.0" />
+                                <Double fx:value="4.5" /> <Double fx:value="-5.5" />
+                                <Double fx:value="17.0" /> <Double fx:value="-5.5" />
+                                <Double fx:value="7.0" /> <Double fx:value="2.2" />
+                                <Double fx:value="10.5" /> <Double fx:value="14.5" />
+                                <Double fx:value="0.0" /> <Double fx:value="7.2" />
+                                <Double fx:value="-10.5" /> <Double fx:value="14.5" />
+                                <Double fx:value="-7.0" /> <Double fx:value="2.2" />
+                                <Double fx:value="-17.0" /> <Double fx:value="-5.5" />
+                                <Double fx:value="-4.5" /> <Double fx:value="-5.5" />
+                            </points>
+                            <effect>
+                                <DropShadow color="#00000030" radius="3.0" />
+                            </effect>
+                        </Polygon>
+
+                        <VBox spacing="2">
+                            <Label style="-fx-text-fill: #006233;" text="Telfat w lqina">
+                                <font>
+                                    <Font name="System" size="20.0" />
+                                </font>
+                            </Label>
+                            <Label style="-fx-text-fill: #C1272D;" text="CAN 2025 - Admin">
+                                <font>
+                                    <Font name="System" size="11.0" />
+                                </font>
+                            </Label>
+                        </VBox>
+                    </HBox>
+                </StackPane>
+
+                <!-- Ligne décorative avec motif -->
+                <HBox alignment="CENTER" prefHeight="2.0" spacing="2" style="-fx-background-color: white;">
+                    <Rectangle fill="#C1272D" height="2.0" width="20.0" />
+                    <Rectangle fill="#006233" height="2.0" width="5.0" />
+                    <Rectangle fill="#C1272D" height="2.0" width="20.0" />
+                    <Rectangle fill="#006233" height="2.0" width="5.0" />
+                    <Rectangle fill="#C1272D" height="2.0" width="20.0" />
+                    <HBox HBox.hgrow="ALWAYS">
+                        <Rectangle fill="#e9ecef" height="2.0" HBox.hgrow="ALWAYS" />
+                    </HBox>
+                </HBox>
+
+                <!-- Navigation Menu -->
+                <VBox spacing="8" style="-fx-padding: 20 15;">
+                    <Label style="-fx-text-fill: #6c757d;" text="ADMINISTRATION">
+                        <font>
+                            <Font name="System" size="10.0" />
+                        </font>
+                        <VBox.margin>
+                            <Insets bottom="8" left="10" top="5" />
+                        </VBox.margin>
+                    </Label>
+
+                    <!-- Dashboard -->
+                    <Button alignment="CENTER_LEFT" graphicTextGap="12" onAction="#goToDashboard" prefHeight="45.0" prefWidth="230.0" style="-fx-background-color: white; -fx-background-radius: 8; -fx-text-fill: #495057; -fx-cursor: hand; -fx-padding: 0 15; -fx-border-color: #e9ecef; -fx-border-width: 1.5; -fx-border-radius: 8;" text="  📊  Tableau de Bord">
+                        <font>
+                            <Font size="13.0" />
+                        </font>
+                    </Button>
+
+                    <!-- Créer Utilisateur -->
+                    <Button alignment="CENTER_LEFT" graphicTextGap="12" onAction="#createUser" prefHeight="45.0" prefWidth="230.0" style="-fx-background-color: white; -fx-background-radius: 8; -fx-text-fill: #495057; -fx-cursor: hand; -fx-padding: 0 15; -fx-border-color: #e9ecef; -fx-border-width: 1.5; -fx-border-radius: 8;" text="  👤  Créer Utilisateur">
+                        <font>
+                            <Font size="13.0" />
+                        </font>
+                    </Button>
+
+                    <!-- Objets Perdus -->
+                    <Button alignment="CENTER_LEFT" graphicTextGap="12" onAction="#viewLostObjects" prefHeight="45.0" prefWidth="230.0" style="-fx-background-color: white; -fx-background-radius: 8; -fx-text-fill: #495057; -fx-cursor: hand; -fx-padding: 0 15; -fx-border-color: #e9ecef; -fx-border-width: 1.5; -fx-border-radius: 8;" text="  📋  Objets Perdus">
+                        <font>
+                            <Font size="13.0" />
+                        </font>
+                    </Button>
+
+                    <!-- Statistiques Active-->
+                    <Button alignment="CENTER_LEFT" graphicTextGap="12" prefHeight="45.0" prefWidth="230.0" style="-fx-background-color: linear-gradient(to right, #C1272D, #d63844); -fx-background-radius: 8; -fx-text-fill: white; -fx-cursor: hand; -fx-padding: 0 15;" text="  📈  Statistiques">
+                        <font>
+                            <Font name="System" size="13.0" />
+                        </font>
+                        <effect>
+                            <DropShadow color="#C1272D40" offsetY="2.0" radius="4.0" />
+                        </effect>
+                    </Button>
+
+                    <!-- Ajouter stade -->
+                    <Button alignment="CENTER_LEFT" graphicTextGap="12" onAction="#addStadium" prefHeight="45.0" prefWidth="230.0" style="-fx-background-color: white; -fx-background-radius: 8; -fx-text-fill: #495057; -fx-cursor: hand; -fx-padding: 0 15; -fx-border-color: #e9ecef; -fx-border-width: 1.5; -fx-border-radius: 8;" text=" ⚽  Ajouter un stade">
+                        <font>
+                            <Font size="13.0" />
+                        </font>
+                    </Button>
+
+                    <!-- Liste des stades -->
+                    <Button alignment="CENTER_LEFT" graphicTextGap="12" onAction="#goToStadiumList" prefHeight="45.0" prefWidth="230.0" style="-fx-background-color: white; -fx-background-radius: 8; -fx-text-fill: #495057; -fx-cursor: hand; -fx-padding: 0 15; -fx-border-color: #e9ecef; -fx-border-width: 1.5; -fx-border-radius: 8;" text="  🏟  Liste des Stades">
+                        <font>
+                            <Font size="13.0" />
+                        </font>
+                    </Button>
+                    <!-- liste reclamations -->
+                    <Button alignment="CENTER_LEFT" graphicTextGap="12" onAction="#goToComplaintList" prefHeight="45.0" prefWidth="230.0" style="-fx-background-color: white; -fx-background-radius: 8; -fx-text-fill: #495057; -fx-cursor: hand; -fx-padding: 0 15; -fx-border-color: #e9ecef; -fx-border-width: 1.5; -fx-border-radius: 8;" text="📋  Liste des Réclamations">
+                        <font>
+                            <Font size="13.0" />
+                        </font>
+                    </Button>
+                </VBox>
+
+                <VBox VBox.vgrow="ALWAYS" />
+
+                <!-- Admin Profile Section avec motif -->
+                <StackPane>
+                    <!-- Motif décoratif en background -->
+                    <HBox alignment="BOTTOM_RIGHT" opacity="0.06">
+                        <Polygon fill="#C1272D" rotate="0">
+                            <points>
+                                <Double fx:value="0.0" /> <Double fx:value="-30.0" />
+                                <Double fx:value="26.0" /> <Double fx:value="-15.0" />
+                                <Double fx:value="26.0" /> <Double fx:value="15.0" />
+                                <Double fx:value="0.0" /> <Double fx:value="30.0" />
+                                <Double fx:value="-26.0" /> <Double fx:value="15.0" />
+                                <Double fx:value="-26.0" /> <Double fx:value="-15.0" />
+                            </points>
+                        </Polygon>
+                    </HBox>
+
+                    <VBox spacing="15" style="-fx-background-color: white; -fx-background-radius: 12; -fx-padding: 20; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 10, 0, 0, 3); -fx-border-color: #e9ecef; -fx-border-width: 1.5; -fx-border-radius: 12;">
+                        <VBox.margin>
+                            <Insets bottom="20" left="15" right="15" />
+                        </VBox.margin>
+
+                        <VBox spacing="4">
+                            <Label fx:id="labelAdmin" style="-fx-text-fill: #212529;" text="Nom Administrateur">
+                                <font>
+                                    <Font name="System" size="14.0" />
+                                </font>
+                            </Label>
+                            <Label style="-fx-text-fill: #C1272D;" text="Administrateur">
+                                <font>
+                                    <Font name="System" size="12.0" />
+                                </font>
+                            </Label>
+                            <Label style="-fx-text-fill: #28a745;" text="●  Connecté">
+                                <font>
+                                    <Font name="System" size="11.0" />
+                                </font>
+                            </Label>
+                        </VBox>
+
+                        <Button onAction="#logout" prefHeight="38.0" prefWidth="200.0" style="-fx-background-color: transparent; -fx-border-color: #dc3545; -fx-border-width: 2; -fx-border-radius: 6; -fx-background-radius: 6; -fx-text-fill: #dc3545; -fx-cursor: hand;" text="🚪  Déconnexion">
+                            <font>
+                                <Font name="System" size="12.0" />
+                            </font>
+                        </Button>
+                    </VBox>
+                </StackPane>
+            </VBox>
+        </ScrollPane>
+    </left>
+
+    <!-- Main Content Area -->
+    <center>
+        <BorderPane style="-fx-background-color: transparent;">
+            <!-- Header Bar avec motif -->
+            <top>
+                <StackPane prefHeight="80.0">
+                    <!-- Motif zellige subtil en arrière-plan -->
+                    <HBox alignment="CENTER_RIGHT" opacity="0.04" spacing="-8" style="-fx-padding: 0 50 0 0;">
+                        <Polygon fill="#C1272D" rotate="0">
+                            <points>
+                                <Double fx:value="0.0" />
+                                <Double fx:value="-15.0" />
+                                <Double fx:value="13.0" />
+                                <Double fx:value="-7.5" />
+                                <Double fx:value="13.0" />
+                                <Double fx:value="7.5" />
+                                <Double fx:value="0.0" />
+                                <Double fx:value="15.0" />
+                                <Double fx:value="-13.0" />
+                                <Double fx:value="7.5" />
+                                <Double fx:value="-13.0" />
+                                <Double fx:value="-7.5" />
+                            </points>
+                        </Polygon>
+                        <Polygon fill="#006233" rotate="30">
+                            <points>
+                                <Double fx:value="0.0" />
+                                <Double fx:value="-15.0" />
+                                <Double fx:value="13.0" />
+                                <Double fx:value="-7.5" />
+                                <Double fx:value="13.0" />
+                                <Double fx:value="7.5" />
+                                <Double fx:value="0.0" />
+                                <Double fx:value="15.0" />
+                                <Double fx:value="-13.0" />
+                                <Double fx:value="7.5" />
+                                <Double fx:value="-13.0" />
+                                <Double fx:value="-7.5" />
+                            </points>
+                        </Polygon>
+                        <Polygon fill="#C1272D" rotate="0">
+                            <points>
+                                <Double fx:value="0.0" />
+                                <Double fx:value="-15.0" />
+                                <Double fx:value="13.0" />
+                                <Double fx:value="-7.5" />
+                                <Double fx:value="13.0" />
+                                <Double fx:value="7.5" />
+                                <Double fx:value="0.0" />
+                                <Double fx:value="15.0" />
+                                <Double fx:value="-13.0" />
+                                <Double fx:value="7.5" />
+                                <Double fx:value="-13.0" />
+                                <Double fx:value="-7.5" />
+                            </points>
+                        </Polygon>
+                    </HBox>
+
+                    <HBox alignment="CENTER_LEFT" spacing="20" style="-fx-background-color: white; -fx-padding: 20 35; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 10, 0, 0, 3);">
+                        <VBox spacing="2">
+                            <Label text="Statistiques Globales" textFill="#212529">
+                                <font>
+                                    <Font name="System" size="24.0" />
+                                </font>
+                            </Label>
+                            <HBox alignment="CENTER_LEFT" spacing="6">
+                                <Rectangle arcHeight="3" arcWidth="3" fill="#C1272D" height="3.0" width="30.0" />
+                                <Rectangle arcHeight="3" arcWidth="3" fill="#006233" height="3.0" width="8.0" />
+                                <Label text="Vue d'ensemble de tous les stades" textFill="#6c757d">
+                                    <font>
+                                        <Font size="13.0" />
+                                    </font>
+                                </Label>
+                            </HBox>
+                        </VBox>
+
+                        <HBox HBox.hgrow="ALWAYS" />
+
+                        <!-- Quick Actions -->
+                        <HBox spacing="12">
+                            <Button onAction="#refreshStatistics" prefHeight="40.0" style="-fx-background-color: #C1272D; -fx-background-radius: 6; -fx-cursor: hand; -fx-text-fill: white;" text="🔄  Actualiser">
+                                <font>
+                                    <Font name="System" size="12.0" />
+                                </font>
+                                <effect>
+                                    <DropShadow color="#C1272D40" offsetY="2.0" radius="4.0" />
+                                </effect>
+                            </Button>
+                        </HBox>
+                    </HBox>
+                </StackPane>
+            </top>
+
+            <!-- Content -->
+            <center>
+                <ScrollPane fitToWidth="true">
+                    <!-- Fond zellige avec image -->
+                    <StackPane opacity="0.1" style="-fx-background-image: url('file:src/main/resources/images/zellige.png'); -fx-background-repeat: no-repeat; -fx-background-size: cover; -fx-background-position: center;" />
+
+                    <VBox spacing="25" style="-fx-padding: 30 40;">
+                        <!-- KPI Cards -->
+                        <HBox spacing="20">
+                            <!-- Total Objets -->
+                            <VBox alignment="CENTER" spacing="10" style="-fx-background-color: white; -fx-background-radius: 12; -fx-padding: 25; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 12, 0, 0, 3); -fx-border-color: #e9ecef; -fx-border-width: 1.5; -fx-border-radius: 12;" HBox.hgrow="ALWAYS">
+                                <Label text="📦" textFill="#C1272D">
+                                    <font>
+                                        <Font size="32.0" />
+                                    </font>
+                                </Label>
+                                <Label fx:id="totalObjectsLabel" text="0" textFill="#C1272D">
+                                    <font>
+                                        <Font name="System" size="36.0" />
+                                    </font>
+                                </Label>
+                                <Label text="Total Objets Perdus" textFill="#6c757d">
+                                    <font>
+                                        <Font size="13.0" />
+                                    </font>
+                                </Label>
+                            </VBox>
+
+                            <!-- Objets en Stock -->
+                            <VBox alignment="CENTER" spacing="10" style="-fx-background-color: white; -fx-background-radius: 12; -fx-padding: 25; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 12, 0, 0, 3); -fx-border-color: #e9ecef; -fx-border-width: 1.5; -fx-border-radius: 12;" HBox.hgrow="ALWAYS">
+                                <Label text="🏪" textFill="#FFA500">
+                                    <font>
+                                        <Font size="32.0" />
+                                    </font>
+                                </Label>
+                                <Label fx:id="inStorageLabel" text="0" textFill="#FFA500">
+                                    <font>
+                                        <Font name="System" size="36.0" />
+                                    </font>
+                                </Label>
+                                <Label text="En Stock" textFill="#6c757d">
+                                    <font>
+                                        <Font size="13.0" />
+                                    </font>
+                                </Label>
+                            </VBox>
+
+                            <!-- Objets Rendus -->
+                            <VBox alignment="CENTER" spacing="10" style="-fx-background-color: white; -fx-background-radius: 12; -fx-padding: 25; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 12, 0, 0, 3); -fx-border-color: #e9ecef; -fx-border-width: 1.5; -fx-border-radius: 12;" HBox.hgrow="ALWAYS">
+                                <Label text="✅" textFill="#006233">
+                                    <font>
+                                        <Font size="32.0" />
+                                    </font>
+                                </Label>
+                                <Label fx:id="returnedLabel" text="0" textFill="#006233">
+                                    <font>
+                                        <Font name="System" size="36.0" />
+                                    </font>
+                                </Label>
+                                <Label text="Objets Rendus" textFill="#6c757d">
+                                    <font>
+                                        <Font size="13.0" />
+                                    </font>
+                                </Label>
+                            </VBox>
+
+                            <!-- Taux de Récupération -->
+                            <VBox alignment="CENTER" spacing="10" style="-fx-background-color: white; -fx-background-radius: 12; -fx-padding: 25; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 12, 0, 0, 3); -fx-border-color: #e9ecef; -fx-border-width: 1.5; -fx-border-radius: 12;" HBox.hgrow="ALWAYS">
+                                <Label text="📊" textFill="#17a2b8">
+                                    <font>
+                                        <Font size="32.0" />
+                                    </font>
+                                </Label>
+                                <Label fx:id="recoveryRateLabel" text="0%" textFill="#17a2b8">
+                                    <font>
+                                        <Font name="System" size="36.0" />
+                                    </font>
+                                </Label>
+                                <Label text="Taux de Récupération" textFill="#6c757d">
+                                    <font>
+                                        <Font size="13.0" />
+                                    </font>
+                                </Label>
+                            </VBox>
+                        </HBox>
+
+                        <!-- Statistiques Réclamations -->
+                        <HBox spacing="20">
+                            <!-- Total Réclamations -->
+                            <VBox alignment="CENTER" spacing="10" style="-fx-background-color: white; -fx-background-radius: 12; -fx-padding: 25; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 12, 0, 0, 3); -fx-border-color: #e9ecef; -fx-border-width: 1.5; -fx-border-radius: 12;" HBox.hgrow="ALWAYS">
+                                <Label text="📝" textFill="#6c757d">
+                                    <font>
+                                        <Font size="28.0" />
+                                    </font>
+                                </Label>
+                                <Label fx:id="totalComplaintsLabel" text="0" textFill="#495057">
+                                    <font>
+                                        <Font name="System" size="32.0" />
+                                    </font>
+                                </Label>
+                                <Label text="Total Réclamations" textFill="#6c757d">
+                                    <font>
+                                        <Font size="12.0" />
+                                    </font>
+                                </Label>
+                            </VBox>
+
+                            <!-- En cours -->
+                            <VBox alignment="CENTER" spacing="10" style="-fx-background-color: white; -fx-background-radius: 12; -fx-padding: 25; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 12, 0, 0, 3); -fx-border-color: #e9ecef; -fx-border-width: 1.5; -fx-border-radius: 12;" HBox.hgrow="ALWAYS">
+                                <Label text="🔍" textFill="#FFA500">
+                                    <font>
+                                        <Font size="28.0" />
+                                    </font>
+                                </Label>
+                                <Label fx:id="inProgressLabel" text="0" textFill="#FFA500">
+                                    <font>
+                                        <Font name="System" size="32.0" />
+                                    </font>
+                                </Label>
+                                <Label text="En Cours" textFill="#6c757d">
+                                    <font>
+                                        <Font size="12.0" />
+                                    </font>
+                                </Label>
+                            </VBox>
+
+                            <!-- Trouvées -->
+                            <VBox alignment="CENTER" spacing="10" style="-fx-background-color: white; -fx-background-radius: 12; -fx-padding: 25; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 12, 0, 0, 3); -fx-border-color: #e9ecef; -fx-border-width: 1.5; -fx-border-radius: 12;" HBox.hgrow="ALWAYS">
+                                <Label text="✅" textFill="#006233">
+                                    <font>
+                                        <Font size="28.0" />
+                                    </font>
+                                </Label>
+                                <Label fx:id="foundLabel" text="0" textFill="#006233">
+                                    <font>
+                                        <Font name="System" size="32.0" />
+                                    </font>
+                                </Label>
+                                <Label text="Trouvées" textFill="#6c757d">
+                                    <font>
+                                        <Font size="12.0" />
+                                    </font>
+                                </Label>
+                            </VBox>
+
+                            <!-- Non trouvées -->
+                            <VBox alignment="CENTER" spacing="10" style="-fx-background-color: white; -fx-background-radius: 12; -fx-padding: 25; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 12, 0, 0, 3); -fx-border-color: #e9ecef; -fx-border-width: 1.5; -fx-border-radius: 12;" HBox.hgrow="ALWAYS">
+                                <Label text="❌" textFill="#dc3545">
+                                    <font>
+                                        <Font size="28.0" />
+                                    </font>
+                                </Label>
+                                <Label fx:id="notFoundLabel" text="0" textFill="#dc3545">
+                                    <font>
+                                        <Font name="System" size="32.0" />
+                                    </font>
+                                </Label>
+                                <Label text="Non Trouvées" textFill="#6c757d">
+                                    <font>
+                                        <Font size="12.0" />
+                                    </font>
+                                </Label>
+                            </VBox>
+                        </HBox>
+
+                        <!-- Charts Row 1 -->
+                        <HBox spacing="20">
+                            <!-- Pie Chart - Types d'objets -->
+                            <VBox spacing="15" style="-fx-background-color: white; -fx-background-radius: 12; -fx-padding: 25; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 12, 0, 0, 3); -fx-border-color: #e9ecef; -fx-border-width: 1.5; -fx-border-radius: 12;" HBox.hgrow="ALWAYS">
+                                <Label text="Répartition par Type d'Objet" textFill="#212529">
+                                    <font>
+                                        <Font name="System" size="16.0" />
+                                    </font>
+                                </Label>
+                                <PieChart fx:id="objectTypeChart" legendVisible="true" prefHeight="300.0" />
+                            </VBox>
+
+                            <!-- Bar Chart - Stades -->
+                            <VBox spacing="15" style="-fx-background-color: white; -fx-background-radius: 12; -fx-padding: 25; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 12, 0, 0, 3); -fx-border-color: #e9ecef; -fx-border-width: 1.5; -fx-border-radius: 12;" HBox.hgrow="ALWAYS">
+                                <Label text="Objets Perdus par Stade" textFill="#212529">
+                                    <font>
+                                        <Font name="System" size="16.0" />
+                                    </font>
+                                </Label>
+                                <BarChart fx:id="stadiumChart" prefHeight="300.0">
+                                    <xAxis>
+                                        <CategoryAxis side="BOTTOM" />
+                                    </xAxis>
+                                    <yAxis>
+                                        <NumberAxis side="LEFT" />
+                                    </yAxis>
+                                </BarChart>
+                            </VBox>
+                        </HBox>
+
+                        <!-- Charts Row 2 -->
+                        <HBox spacing="20">
+                            <!-- Line Chart - Évolution temporelle -->
+                            <VBox spacing="15" style="-fx-background-color: white; -fx-background-radius: 12; -fx-padding: 25; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 12, 0, 0, 3); -fx-border-color: #e9ecef; -fx-border-width: 1.5; -fx-border-radius: 12;" HBox.hgrow="ALWAYS">
+                                <Label text="Évolution des Objets Perdus (6 derniers mois)" textFill="#212529">
+                                    <font>
+                                        <Font name="System" size="16.0" />
+                                    </font>
+                                </Label>
+                                <LineChart fx:id="timelineChart" prefHeight="300.0">
+                                    <xAxis>
+                                        <CategoryAxis side="BOTTOM" />
+                                    </xAxis>
+                                    <yAxis>
+                                        <NumberAxis side="LEFT" />
+                                    </yAxis>
+                                </LineChart>
+                            </VBox>
+
+                            <!-- Pie Chart - Zones -->
+                            <VBox spacing="15" style="-fx-background-color: white; -fx-background-radius: 12; -fx-padding: 25; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 12, 0, 0, 3); -fx-border-color: #e9ecef; -fx-border-width: 1.5; -fx-border-radius: 12;" HBox.hgrow="ALWAYS">
+                                <Label text="Répartition par Zone" textFill="#212529">
+                                    <font>
+                                        <Font name="System" size="16.0" />
+                                    </font>
+                                </Label>
+                                <PieChart fx:id="zoneChart" legendVisible="true" prefHeight="300.0" />
+                            </VBox>
+                        </HBox>
+                    </VBox>
+
+
+                </ScrollPane>
+            </center>
+        </BorderPane>
+    </center>
+
+    <!-- Footer avec motif -->
+    <bottom>
+        <StackPane prefHeight="50.0">
+            <!-- Motif zellige dans le footer -->
+            <HBox alignment="CENTER" opacity="0.04" spacing="15">
+                <Polygon fill="#C1272D" rotate="0">
+                    <points>
+                        <Double fx:value="0.0" />
+                        <Double fx:value="-8.0" />
+                        <Double fx:value="5.7" />
+                        <Double fx:value="-4.0" />
+                        <Double fx:value="5.7" />
+                        <Double fx:value="4.0" />
+                        <Double fx:value="0.0" />
+                        <Double fx:value="8.0" />
+                        <Double fx:value="-5.7" />
+                        <Double fx:value="4.0" />
+                        <Double fx:value="-5.7" />
+                        <Double fx:value="-4.0" />
+                    </points>
+                </Polygon>
+                <Polygon fill="#006233" rotate="22.5">
+                    <points>
+                        <Double fx:value="0.0" />
+                        <Double fx:value="-8.0" />
+                        <Double fx:value="5.7" />
+                        <Double fx:value="-4.0" />
+                        <Double fx:value="5.7" />
+                        <Double fx:value="4.0" />
+                        <Double fx:value="0.0" />
+                        <Double fx:value="8.0" />
+                        <Double fx:value="-5.7" />
+                        <Double fx:value="4.0" />
+                        <Double fx:value="-5.7" />
+                        <Double fx:value="-4.0" />
+                    </points>
+                </Polygon>
+                <Polygon fill="#C1272D" rotate="0">
+                    <points>
+                        <Double fx:value="0.0" />
+                        <Double fx:value="-8.0" />
+                        <Double fx:value="5.7" />
+                        <Double fx:value="-4.0" />
+                        <Double fx:value="5.7" />
+                        <Double fx:value="4.0" />
+                        <Double fx:value="0.0" />
+                        <Double fx:value="8.0" />
+                        <Double fx:value="-5.7" />
+                        <Double fx:value="4.0" />
+                        <Double fx:value="-5.7" />
+                        <Double fx:value="-4.0" />
+                    </points>
+                </Polygon>
+                <Polygon fill="#006233" rotate="22.5">
+                    <points>
+                        <Double fx:value="0.0" />
+                        <Double fx:value="-8.0" />
+                        <Double fx:value="5.7" />
+                        <Double fx:value="-4.0" />
+                        <Double fx:value="5.7" />
+                        <Double fx:value="4.0" />
+                        <Double fx:value="0.0" />
+                        <Double fx:value="8.0" />
+                        <Double fx:value="-5.7" />
+                        <Double fx:value="4.0" />
+                        <Double fx:value="-5.7" />
+                        <Double fx:value="-4.0" />
+                    </points>
+                </Polygon>
+            </HBox>
+
+            <HBox alignment="CENTER" style="-fx-background-color: white; -fx-border-color: #e9ecef; -fx-border-width: 1.5 0 0 0;">
+                <VBox alignment="CENTER" spacing="4" style="-fx-padding: 8 0;">
+                    <HBox alignment="CENTER" spacing="4">
+                        <Rectangle arcHeight="2.5" arcWidth="2.5" fill="#C1272D" height="2.5" width="25.0" />
+                        <Rectangle arcHeight="2.5" arcWidth="2.5" fill="#006233" height="2.5" width="6.0" />
+                        <Rectangle arcHeight="2.5" arcWidth="2.5" fill="#C1272D" height="2.5" width="25.0" />
+                    </HBox>
+                    <Label text="© 2025 Telfat w lqina - CAN 2025 Maroc - Tous droits réservés" textFill="#6c757d">
+                        <font>
+                            <Font size="11.0" />
+                        </font>
+                    </Label>
+                </VBox>
+            </HBox>
+        </StackPane>
+    </bottom>
+</BorderPane>

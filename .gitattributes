@@ -1,0 +1,5 @@
+# Fichiers sensibles - ne jamais commiter
+*.properties filter=git-crypt diff=git-crypt
+.env filter=git-crypt diff=git-crypt
+*.key filter=git-crypt diff=git-crypt
+*.pem filter=git-crypt diff=git-crypt

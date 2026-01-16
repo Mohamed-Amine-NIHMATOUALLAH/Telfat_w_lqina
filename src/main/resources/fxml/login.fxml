@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.Double?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Polygon?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.firstproject.telfat_w_lqina.controllers.loginController">
+    <children>
+        <HBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <!-- SECTION GAUCHE : Branding Maroc / CAN 2025 -->
+                <VBox alignment="CENTER" prefHeight="500.0" prefWidth="350.0" style="-fx-background-color: #C1272D;">
+                    <children>
+                        <!-- Etoile du Maroc (Style graphique) -->
+                        <Polygon fill="#006233" stroke="WHITE" strokeType="INSIDE" strokeWidth="2.0">
+                            <points>
+                                <Double fx:value="-50.0" /> <Double fx:value="40.0" />
+                                <Double fx:value="50.0" /> <Double fx:value="40.0" />
+                                <Double fx:value="0.0" /> <Double fx:value="-60.0" />
+                            </points>
+                            <!-- Note: Ceci est un triangle simplifié pour l'exemple,
+                                 une étoile complète nécessite plus de points,
+                                 mais l'effet visuel vert/rouge est là -->
+                            <points>
+                                <Double fx:value="0.0" /> <Double fx:value="-50.0" />
+                                <Double fx:value="12.0" /> <Double fx:value="-15.0" />
+                                <Double fx:value="47.0" /> <Double fx:value="-15.0" />
+                                <Double fx:value="19.0" /> <Double fx:value="6.0" />
+                                <Double fx:value="29.0" /> <Double fx:value="40.0" />
+                                <Double fx:value="0.0" /> <Double fx:value="20.0" />
+                                <Double fx:value="-29.0" /> <Double fx:value="40.0" />
+                                <Double fx:value="-19.0" /> <Double fx:value="6.0" />
+                                <Double fx:value="-47.0" /> <Double fx:value="-15.0" />
+                                <Double fx:value="-12.0" /> <Double fx:value="-15.0" />
+                            </points>
+                            <effect>
+                                <DropShadow color="#00000040" />
+                            </effect>
+                        </Polygon>
+
+                        <Label text="Telfat w lqina" textFill="WHITE">
+                            <font>
+                                <Font name="System" size="32.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets top="20.0" />
+                            </VBox.margin>
+                        </Label>
+                        <Line endX="100.0" startX="-100.0" stroke="WHITE" strokeWidth="2.0">
+                            <VBox.margin>
+                                <Insets bottom="10.0" top="10.0" />
+                            </VBox.margin>
+                        </Line>
+                        <Label text="CAN 2025" textFill="#ffeb3b">
+                            <font>
+                                <Font name="System" size="28.0" />
+                            </font>
+                        </Label>
+                        <Label text="Bienvenue sur la plateforme officielle" textFill="WHITE">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets top="10.0" />
+                            </VBox.margin>
+                        </Label>
+                    </children>
+                    <effect>
+                        <DropShadow height="0.0" radius="4.75" width="21.0" />
+                    </effect>
+                </VBox>
+
+                <!-- SECTION DROITE : Formulaire de Login -->
+                <VBox alignment="CENTER" prefHeight="500.0" prefWidth="450.0" style="-fx-background-color: white;" HBox.hgrow="ALWAYS">
+                    <children>
+                        <Label text="Connexion" textFill="#c1272d">
+                            <font>
+                                <Font name="System" size="32.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets bottom="30.0" />
+                            </VBox.margin>
+                        </Label>
+
+                        <VBox maxWidth="300.0" spacing="15.0">
+                            <children>
+                                <Label text="Nom d'utilisateur" textFill="#666666">
+                                    <font>
+                                        <Font name="System" size="12.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="usernameTextField" promptText="Entrez votre identifiant" style="-fx-background-color: transparent; -fx-border-color: #c1c1c1; -fx-border-width: 0px 0px 2px 0px; -fx-text-fill: #333;">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </TextField>
+
+                                <Label text="Mot de passe" textFill="#666666">
+                                    <font>
+                                        <Font name="System" size="12.0" />
+                                    </font>
+                                    <VBox.margin>
+                                        <Insets top="10.0" />
+                                    </VBox.margin>
+                                </Label>
+                                <PasswordField fx:id="passwordField" promptText="Entrez votre mot de passe" style="-fx-background-color: transparent; -fx-border-color: #c1c1c1; -fx-border-width: 0px 0px 2px 0px; -fx-text-fill: #333;">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </PasswordField>
+
+                                <HBox alignment="CENTER_LEFT">
+                                    <children>
+                                        <CheckBox mnemonicParsing="false" text="Se souvenir de moi" textFill="#666666" />
+                                        <HBox HBox.hgrow="ALWAYS" />
+                                        <Hyperlink text="Mot de passe oublié ?" textFill="#c1272d" />
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets top="10.0" />
+                                    </VBox.margin>
+                                </HBox>
+
+                                <Button mnemonicParsing="false" onAction="#login" prefHeight="40.0" prefWidth="300.0" style="-fx-background-color: #006233; -fx-cursor: hand;" text="SE CONNECTER" textFill="WHITE">
+                                    <font>
+                                        <Font name="System" size="14.0" />
+                                    </font>
+                                    <VBox.margin>
+                                        <Insets top="20.0" />
+                                    </VBox.margin>
+                                    <effect>
+                                        <DropShadow color="#00000033" offsetY="3.0" />
+                                    </effect>
+                                </Button>
+
+                                <HBox alignment="CENTER" spacing="5.0">
+                                    <VBox.margin>
+                                        <Insets top="10.0" />
+                                    </VBox.margin>
+                                </HBox>
+                            </children>
+                        </VBox>
+                    </children>
+                    <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                    </padding>
+                </VBox>
+            </children>
+        </HBox>
+    </children>
+</AnchorPane>
+
+
+

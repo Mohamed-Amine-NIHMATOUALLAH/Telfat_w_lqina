@@ -1,0 +1,113 @@
+/* =================================================================
+   STYLE POUR ViewLostObjects.fxml - TELFAT W LQINA CAN 2025
+   ================================================================= */
+
+/* TableView principale */
+.table-view {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+
+/* Header des colonnes */
+.table-view .column-header-background {
+    -fx-background-color: linear-gradient(to bottom, #006233, #005028);
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+    -fx-padding: 10 5 10 5;
+}
+
+/* Lignes du tableau */
+.table-view .table-row-cell {
+    -fx-background-color: white;
+    -fx-border-color: transparent transparent #e0e0e0 transparent;
+    -fx-border-width: 0 0 1 0;
+    -fx-padding: 5px;
+}
+
+.table-view .table-row-cell:odd {
+    -fx-background-color: #f9f9f9;
+}
+
+/* Survol des lignes */
+.table-view .table-row-cell:hover {
+    -fx-background-color: #fff3cd;
+    -fx-cursor: hand;
+}
+
+/* Sélection de ligne */
+.table-view .table-row-cell:selected {
+    -fx-background-color: #C1272D;
+    -fx-text-fill: white;
+}
+
+.table-view .table-row-cell:selected .table-cell {
+    -fx-text-fill: white;
+}
+
+/* Cellules */
+.table-view .table-cell {
+    -fx-padding: 8 5 8 5;
+    -fx-font-size: 12px;
+    -fx-text-fill: #333333;
+}
+
+/* Scrollbar verticale */
+.table-view .scroll-bar:vertical {
+    -fx-background-color: #f5f5f5;
+}
+
+.table-view .scroll-bar:vertical .thumb {
+    -fx-background-color: #006233;
+    -fx-background-radius: 5px;
+}
+
+.table-view .scroll-bar:vertical .thumb:hover {
+    -fx-background-color: #C1272D;
+}
+
+/* Scrollbar horizontale */
+.table-view .scroll-bar:horizontal {
+    -fx-background-color: #f5f5f5;
+}
+
+.table-view .scroll-bar:horizontal .thumb {
+    -fx-background-color: #006233;
+    -fx-background-radius: 5px;
+}
+
+/* Coins du scrollbar */
+.table-view .corner {
+    -fx-background-color: #f5f5f5;
+}
+
+/* Placeholder quand la table est vide */
+.table-view .placeholder .label {
+    -fx-text-fill: #999999;
+    -fx-font-size: 14px;
+    -fx-font-style: italic;
+}
+
+/* Focus sur le TableView */
+.table-view:focused .table-row-cell:selected {
+    -fx-background-color: #C1272D;
+}
+
+/* Animation au chargement */
+@keyframes fadeIn {
+    from { -fx-opacity: 0; }
+    to { -fx-opacity: 1; }
+}
+
+.table-view {
+    -fx-animation: fadeIn 0.5s;
+}
+

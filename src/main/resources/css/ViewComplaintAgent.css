@@ -1,0 +1,118 @@
+/* Style du TableView */
+.table-view {
+    -fx-background-color: transparent;
+    -fx-background-radius: 8;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: linear-gradient(to bottom, #006233, #007d42);
+    -fx-background-radius: 8 8 0 0;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+    -fx-alignment: center-left;
+    -fx-padding: 10 5 10 10;
+}
+
+.table-view .table-cell {
+    -fx-border-color: transparent transparent #e9ecef transparent;
+    -fx-padding: 8 5 8 10;
+}
+
+.table-row-cell {
+    -fx-background-color: white;
+    -fx-border-color: transparent;
+}
+
+.table-row-cell:hover {
+    -fx-background-color: #f8f9fa;
+    -fx-cursor: hand;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #e7f5e9;
+    -fx-border-color: transparent;
+}
+
+.table-row-cell:selected .table-cell {
+    -fx-text-fill: #212529;
+}
+
+.table-view .filler {
+    -fx-background-color: transparent;
+}
+
+/* Style des cartes */
+.info-card {
+    -fx-background-color: white;
+    -fx-background-radius: 12;
+    -fx-padding: 20;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 12, 0, 0, 4);
+}
+
+.info-card-green {
+    -fx-border-color: transparent transparent transparent #006233;
+    -fx-border-width: 0 0 0 3;
+    -fx-border-radius: 12;
+}
+
+.info-card-red {
+    -fx-border-color: transparent transparent transparent #C1272D;
+    -fx-border-width: 0 0 0 3;
+    -fx-border-radius: 12;
+}
+
+/* Badges avec couleurs d'icônes */
+.icon-badge-green {
+    -fx-background-color: #f0f9f4;
+    -fx-background-radius: 8;
+    -fx-padding: 8;
+}
+
+.icon-badge-green .label {
+    -fx-text-fill: #006233 !important;
+}
+
+.icon-badge-red {
+    -fx-background-color: #fef2f2;
+    -fx-background-radius: 8;
+    -fx-padding: 8;
+}
+
+.icon-badge-red .label {
+    -fx-text-fill: #C1272D !important;
+}
+
+/* Force le texte noir pour tous les labels des cartes */
+.info-card .label {
+    -fx-text-fill: #1a1a1a;
+}
+
+/* Titres des sections - noir intense */
+.info-card > .hbox > .label {
+    -fx-text-fill: #000000 !important;
+    -fx-font-weight: bold;
+}
+
+/* Labels des étiquettes dans GridPane */
+.info-card .grid-pane > .label {
+    -fx-text-fill: #404040 !important;
+}
+
+/* Valeurs en gras dans GridPane */
+.info-card .grid-pane > .label:has([style*="Bold"]) {
+    -fx-text-fill: #1a1a1a !important;
+}
+
+/* ScrollPane avec fond */
+.scroll-pane > .viewport {
+    -fx-background-color: #faf8f5;
+}
