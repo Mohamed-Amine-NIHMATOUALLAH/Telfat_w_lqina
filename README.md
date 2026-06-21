@@ -313,15 +313,6 @@ See [SECURITY_SETUP.md](./SECURITY_SETUP.md) for:
 
 ---
 
-## 👥 Team
-
-| Member | Role | Contact |
-|--------|------|---------|
-| Mohamed Amine Nihmatouallah |  Developer | [LinkedIn](https://ma.linkedin.com/in/mohamed-amine-nihmatouallah) |
-| Yassine Atiki | Developer | [LinkedIn](https://ma.linkedin.com/in/yassine-atiki-b8a815332) |
-
----
-
 ## ❓ FAQ
 
 **Q: How to reset the database?**
